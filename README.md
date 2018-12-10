@@ -1,1 +1,1 @@
-# amazonReviews
+# newsAnalyzer
