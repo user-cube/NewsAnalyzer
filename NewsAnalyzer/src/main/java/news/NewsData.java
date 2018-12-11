@@ -126,7 +126,9 @@ public class NewsData {
     /**
      * Initializes MinHash.
      *
-     * Generate: 1. The Coefficient Map 2. Signatures to all reviews.
+     * Generate: 
+     *    1. The Coefficient Map 
+     *    2. Signatures to all reviews.
      */
     public final void initMinHash() {
         minHash = new MinHash(200);

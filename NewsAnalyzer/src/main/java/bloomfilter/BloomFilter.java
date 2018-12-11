@@ -13,6 +13,14 @@ import java.io.Serializable;
 import hash.FNV1a;
 import hash.MurmurHash;
 
+/**
+ * Métodos Probabilísticos Para a Engenharia Informática.
+ * 2018-2019.
+ * Prática 4.
+ * Professor: António Teixeira.
+ * Alunos: Rui Coelho e Vitor Fajardo.
+ */
+
 public class BloomFilter implements Serializable {
     
     /**

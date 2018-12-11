@@ -59,7 +59,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" pref="674" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="690" max="32767" attributes="0"/>
                       <Component id="Title" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -106,7 +106,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Comic Sans MS" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Review"/>
+            <Property name="text" type="java.lang.String" value="News"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -142,7 +142,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Similar Reviews"/>
+            <Property name="text" type="java.lang.String" value="Similar news"/>
           </Properties>
         </Component>
         <Component class="java.awt.List" name="SimilarList">

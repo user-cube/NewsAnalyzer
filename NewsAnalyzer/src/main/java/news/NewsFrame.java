@@ -10,6 +10,7 @@ package news;
  */
 import java.awt.Component;
 import java.awt.event.KeyEvent;
+import java.util.Iterator;
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -103,7 +104,7 @@ public class NewsFrame extends javax.swing.JFrame {
 
         Title.setEditable(false);
         Title.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
-        Title.setText("Review");
+        Title.setText("News");
 
         javax.swing.GroupLayout NewsLayout = new javax.swing.GroupLayout(News);
         News.setLayout(NewsLayout);
@@ -112,7 +113,7 @@ public class NewsFrame extends javax.swing.JFrame {
             .addGroup(NewsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(NewsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
                     .addComponent(Title))
                 .addContainerGap())
         );
@@ -126,7 +127,7 @@ public class NewsFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel1.setText("Similar Reviews");
+        jLabel1.setText("Similar news");
 
         SimilarList.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -329,7 +330,8 @@ public class NewsFrame extends javax.swing.JFrame {
             List<News> result = data.search(category, input);
             currentResults = new News[result.size()];
             int cont = 0;
-            for (News a : result) {
+            for (Iterator<news.News> it = result.iterator(); it.hasNext();) {
+                News a = it.next();
                 SearchResuts.add(a.getTitle());
                 currentResults[cont++] = a;
             }
@@ -351,7 +353,8 @@ public class NewsFrame extends javax.swing.JFrame {
         List<News> res = data.compare(current);
         currentSimilar = new News[res.size()];
         int cont = 0;
-        for (News r: res) {
+        for (Iterator<news.News> it = res.iterator(); it.hasNext();) {
+            News r = it.next();
             currentSimilar[cont++] = r;
             SimilarList.add(r.getTitle());
         }
