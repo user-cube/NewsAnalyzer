@@ -31,7 +31,7 @@ import minhash.MinHash;
 public class NewsData {
 
     /**
-     * Dataset Structure: 1) First Line - Review Title 2) Remainder - The review
+     * Dataset Structure: 1) First Line - news Title 2) Remainder - The news
      * content
      *
      * The files are organized by categories each category have it's own folder
@@ -41,11 +41,11 @@ public class NewsData {
     
     
     /**
-     * Reviews Map.
+     * News Map.
      */
     private Map<String, List<News>> map = new HashMap<>();
     /**
-     * Array of reviews.
+     * Array of news.
      */
     private News[] lista;
     /**
@@ -98,14 +98,14 @@ public class NewsData {
 
     /**
      * Search function. BloomFilter is used to check if the words introduced by
-     * the user are in the reviews.
+     * the user are in the news.
      *
      * @param category News category.
      *
      * @param input Text introduced by the user.
      *
-     * @return Reviews if the text is in at least one of the reviews, if not
-     * there is no reviews to present, empty list.
+     * @return News if the text is in at least one of the news, if not
+     * there is no news to present, empty list.
      */
     public List<News> search(String category, String input) {
         List<News> out = new ArrayList<>();
@@ -128,7 +128,7 @@ public class NewsData {
      *
      * Generate: 
      *    1. The Coefficient Map 
-     *    2. Signatures to all reviews.
+     *    2. Signatures to all news.
      */
     public final void initMinHash() {
         minHash = new MinHash(200);
@@ -141,13 +141,13 @@ public class NewsData {
     }
 
     /**
-     * Analysis and comparison of all reviews.
+     * Analysis and comparison of all news.
      *
      *
-     * If similarity is bigger then 0 returns that reviews as result.
+     * If similarity is bigger then 0 returns that news as result.
      *
      * @param a
-     * @return - Similar reviews. (similarity > 0)
+     * @return - Similar news. (similarity > 0)
      */
     public List<News> compare(News a) {
         Set<Set<String>> similaritySet;

@@ -30,15 +30,15 @@ public class NewsFrame extends javax.swing.JFrame {
      */
     private final NewsData data;
     /**
-     * Array of current reviews.
+     * Array of current news.
      */
     private News[] currentResults;
     /**
-     * Array of similar reviews.
+     * Array of similar news.
      */
     private News[] currentSimilar;
     /**
-     * Current review.
+     * Current news.
      */
     private News current;
 
@@ -54,7 +54,7 @@ public class NewsFrame extends javax.swing.JFrame {
      *      -> Football
      *      -> Rugby
      * 
-     * There is other category called that displays all news.
+     * There is other category called Any that displays all news.
      */
     
     public NewsFrame() {

@@ -44,14 +44,14 @@ public class News extends Document {
     
     /**
      * Constuctor.
-     * Builds BloomFolter with the words in the title and review content.
-     * In new searchs generates the Shingle Set of the Review.
+     * Builds BloomFolter with the words in the title and news content.
+     * In new searchs generates the Shingle Set of the news..
      * 
      * @param title
-     *          Review title.
+     *          News title.
      * 
      * @param content 
-     *          Review content.
+     *          News content.
      */
     @SuppressWarnings("OverridableMethodCallInConstructor")
     public News(String title, String content) {
@@ -69,7 +69,7 @@ public class News extends Document {
     }
     
     /**
-     * Check if the words chosen by the user are in the review.
+     * Check if the words chosen by the user are in the news.
      * 
      * @param strings
      *          Words introduced by the user.
@@ -88,7 +88,7 @@ public class News extends Document {
      * Title getter.
      * 
      * @return title -
-     *          The review title.
+     *          The news title.
      * 
      */
     public String getTitle() {
@@ -99,7 +99,7 @@ public class News extends Document {
      * Title setter.
      * 
      * @param title 
-     *          The review title.
+     *          The news title.
      */
     public void setTitle(String title) {
         this.title = title;
@@ -109,7 +109,7 @@ public class News extends Document {
      * Content getter.
      * 
      * @return content
-     *          - The review content.
+     *          - The news content.
      */
     public String getContent() {
         return content;
@@ -119,7 +119,7 @@ public class News extends Document {
      * Content setter.
      * 
      * @param content 
-     *          The review content.
+     *          The news content.
      */
     public void setContent(String content) {
         this.content = content;
@@ -129,7 +129,7 @@ public class News extends Document {
      * ID getter.
      * 
      * @return id
-     *      - The review id.
+     *      - The news id.
      */
     public int getId() {
         return id;

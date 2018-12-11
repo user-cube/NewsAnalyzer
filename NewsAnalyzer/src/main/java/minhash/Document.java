@@ -22,7 +22,7 @@ import java.util.Set;
 
 public class Document {
     /**
-     * Review identification.
+     * News identification.
      */
     private final String identification;
     /**
