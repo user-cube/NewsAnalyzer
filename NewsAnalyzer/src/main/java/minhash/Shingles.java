@@ -12,6 +12,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
+ * Shigles of a document.
+ * 
  * Métodos Probabilísticos Para a Engenharia Informática.
  * 2018-2019.
  * Prática 4.

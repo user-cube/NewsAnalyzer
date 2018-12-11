@@ -13,6 +13,8 @@ import java.util.LinkedList;
 import java.util.Set;
 
 /**
+ * Document signatures.
+ * 
  * Métodos Probabilísticos Para a Engenharia Informática.
  * 2018-2019.
  * Prática 4.

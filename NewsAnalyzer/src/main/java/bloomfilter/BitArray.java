@@ -13,6 +13,8 @@ import java.io.Serializable;
 import java.util.BitSet;
 
 /**
+ * Generic implementation of an Array of Bits.
+ * 
  * Métodos Probabilísticos Para a Engenharia Informática.
  * 2018-2019.
  * Prática 4.

@@ -14,6 +14,9 @@ import hash.FNV1a;
 import hash.MurmurHash;
 
 /**
+ * 
+ * Generic implementation of an BloomFilter.
+ * 
  * Métodos Probabilísticos Para a Engenharia Informática.
  * 2018-2019.
  * Prática 4.

@@ -15,6 +15,8 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
+ * Generic implementation of an Graphical Interface with java swing.
+ * 
  * Métodos Probabilísticos Para a Engenharia Informática.
  * 2018-2019.
  * Prática 4.
@@ -48,11 +50,11 @@ public class NewsFrame extends javax.swing.JFrame {
      * The categories are given by the folder name placed on dataset/news.
      * 
      * He have 5 categories:
-     *      -> Tennis
-     *      -> Athletics
-     *      -> Cricket
-     *      -> Football
-     *      -> Rugby
+     *      - Tennis
+     *      - Athletics
+     *      - Cricket
+     *      - Football
+     *      - Rugby
      * 
      * There is other category called Any that displays all news.
      */

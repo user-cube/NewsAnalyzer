@@ -18,6 +18,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
+ * Generic implementation of a MinHash.
+ * 
  * Métodos Probabilísticos Para a Engenharia Informática.
  * 2018-2019.
  * Prática 4.

@@ -13,6 +13,8 @@ import minhash.Document;
 import minhash.Shingles;
 
 /**
+ * Associate shingle to the respective document.
+ * 
  * Métodos Probabilísticos Para a Engenharia Informática.
  * 2018-2019.
  * Prática 4.
@@ -45,7 +47,7 @@ public class News extends Document {
     /**
      * Constuctor.
      * Builds BloomFolter with the words in the title and news content.
-     * In new searchs generates the Shingle Set of the news..
+     * In new searchs generates the Shingle Set of the news.
      * 
      * @param title
      *          News title.

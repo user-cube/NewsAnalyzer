@@ -55,12 +55,15 @@ public class Main {
      * Tests intialization.
      * 
      * @param args
+     *          Arguments.
      * 
      * @throws FileNotFoundException
+     *          If file not found.
      * 
      * @throws IOException
-     *                  
+     *          Signals that an I/O exception of some sort has occurred. 
      * @throws ClassNotFoundException
+     *          If class not found.
      */
     
     @SuppressWarnings("unused") 

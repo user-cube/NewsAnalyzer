@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 import minhash.MinHash;
 
 /**
+ * Read and document structuring.
  * Métodos Probabilísticos Para a Engenharia Informática. 
  * 2018-2019. 
  * Prática 4.
@@ -92,7 +93,6 @@ public class NewsData {
                 });
             });
         }
-        //after all the files are loaded initialize the minHash
         initMinHash();
     }
 
@@ -147,7 +147,8 @@ public class NewsData {
      * If similarity is bigger then 0 returns that news as result.
      *
      * @param a
-     * @return - Similar news. (similarity > 0)
+     *         - News 
+     * @return - Similar news. (similarity bigger than 0)
      */
     public List<News> compare(News a) {
         Set<Set<String>> similaritySet;
