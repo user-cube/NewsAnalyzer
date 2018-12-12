@@ -37,16 +37,13 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Component id="News" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Search" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Similar" min="-2" max="-2" attributes="0"/>
           </Group>
+          <Component id="News" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -59,7 +56,7 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" pref="690" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="914" max="32767" attributes="0"/>
                       <Component id="Title" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -188,7 +185,7 @@
                       <Component id="jLabel2" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
-                  <Component id="SearchResuts" pref="190" max="32767" attributes="0"/>
+                  <Component id="SearchResuts" pref="329" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>

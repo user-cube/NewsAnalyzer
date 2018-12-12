@@ -115,7 +115,7 @@ public class NewsFrame extends javax.swing.JFrame {
             .addGroup(NewsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(NewsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 690, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 914, Short.MAX_VALUE)
                     .addComponent(Title))
                 .addContainerGap())
         );
@@ -211,7 +211,7 @@ public class NewsFrame extends javax.swing.JFrame {
                     .addComponent(CategoryList, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(SearchResuts, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE))
+                .addComponent(SearchResuts, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -229,14 +229,12 @@ public class NewsFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(News, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(Search, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Similar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(News, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -258,7 +256,8 @@ public class NewsFrame extends javax.swing.JFrame {
             List<News> result = data.search(category, input);
             currentResults = new News[result.size()];
             int cont = 0;
-            for (News a : result) {
+            for (Iterator<news.News> it = result.iterator(); it.hasNext();) {
+                News a = it.next();
                 SearchResuts.add(a.getTitle());
                 currentResults[cont++] = a;
             }
@@ -276,7 +275,8 @@ public class NewsFrame extends javax.swing.JFrame {
                 List<News> result = data.search(category, input);
                 currentResults = new News[result.size()];
                 int cont = 0;
-                for (News a : result) {
+                for (Iterator<news.News> it = result.iterator(); it.hasNext();) {
+                    News a = it.next();
                     SearchResuts.add(a.getTitle());
                     currentResults[cont++] = a;
                 }
@@ -327,16 +327,16 @@ public class NewsFrame extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(empty, "Não é possível fazer pesquisa vazia.");
             }
             else{
-            SearchResuts.removeAll();
-            String category = CategoryList.getSelectedItem().toLowerCase();
-            List<News> result = data.search(category, input);
-            currentResults = new News[result.size()];
-            int cont = 0;
-            for (Iterator<news.News> it = result.iterator(); it.hasNext();) {
-                News a = it.next();
-                SearchResuts.add(a.getTitle());
-                currentResults[cont++] = a;
-            }
+                SearchResuts.removeAll();
+                String category = CategoryList.getSelectedItem().toLowerCase();
+                List<News> result = data.search(category, input);
+                currentResults = new News[result.size()];
+                int cont = 0;
+                for (Iterator<news.News> it = result.iterator(); it.hasNext();) {
+                    News a = it.next();
+                    SearchResuts.add(a.getTitle());
+                    currentResults[cont++] = a;
+                }
             }
         }
     }//GEN-LAST:event_SearchInputKeyPressed

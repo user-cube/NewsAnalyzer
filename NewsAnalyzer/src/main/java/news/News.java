@@ -9,7 +9,7 @@ package news;
  * Import section.
  */
 import bloomfilter.BloomFilter;
-import minhash.Document;
+import minhash.Signatures;
 import minhash.Shingles;
 
 /**
@@ -22,7 +22,7 @@ import minhash.Shingles;
  * Alunos: Rui Coelho e Vitor Fajardo.
  */
 
-public class News extends Document {
+public class News extends Signatures {
     /**
      * Current ID initialized at 0.
      */

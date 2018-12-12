@@ -1,4 +1,5 @@
 /*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -23,16 +24,18 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.Scanner;
 import java.util.Set;
 import bloomfilter.BloomFilter;
-import minhash.Document;
+import minhash.Signatures;
 import minhash.MinHash;
 import minhash.Shingles;
+import java.util.Random;
 
 
 /**
+ * Run tests.
+ * 
  * Métodos Probabilísticos Para a Engenharia Informática.
  * 2018-2019.
  * Prática 4.
@@ -84,7 +87,7 @@ public class Main {
         /**
          * Declaration of documents list.
          */
-        List<Document> docList;
+        List<Signatures> docList;
         /**
          * Declaration of minHash.
          */
@@ -111,13 +114,21 @@ public class Main {
          * Insert 1000 elements.
          */
         int count = 0;
+        int count2 = 0;
+        
         try {
             sc = new Scanner(new File("dataset/articles_1000.train"));
             while (sc.hasNextLine()) {
+                
                 bloom.insert(sc.nextLine().getBytes());
                 count++;
+                
+                if(Math.random() < 0.5) {
+                        count2++;
+                } 
             }
             System.out.println("Number of inserted elements: " + count);
+            System.out.println("Em " + count + ", o contador estocastico contou " + count2);
             
             /**
              * Test false positives.
@@ -162,7 +173,7 @@ public class Main {
         
         try (ObjectInputStream ois = new ObjectInputStream(fis)) {
             BloomFilter result;
-            result = (BloomFilter) ois.readObject();
+            result = (BloomFilter) ois.readObject();  
         }
         
         /**
@@ -191,7 +202,7 @@ public class Main {
              * Shigle the article.
              */
             while (sc.hasNextLine()) {
-                Document doc = new Document(sc.next());
+                Signatures doc = new Signatures(sc.next());
                 Set<Integer> shingle = Shingles.shingling(sc.nextLine(), 5); 
                 doc.setShingle(shingle);
                 docList.add(doc);
@@ -248,8 +259,8 @@ public class Main {
              */
             for (int i = 0; i < docList.size(); i++) {
                 for (int j = i + 1; j < docList.size(); j++) {
-                    Document d1 = docList.get(i);
-                    Document d2 = docList.get(j);
+                    Signatures d1 = docList.get(i);
+                    Signatures d2 = docList.get(j);
                     String id1 = d1.getIdentification();
                     String id2 = d2.getIdentification();
                     if (!id1.equals(id2)) {
