@@ -2,6 +2,9 @@
 
 Tool to analyze news from a dataset.
 
+## Documentation
+*  [See documentation](https://user-cube.github.io/NewsAnalyzer/)
+
 ## Dataset structure
 
 Organized in different files separated by categories (folders):
