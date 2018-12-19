@@ -1,0 +1,17 @@
+hash\FNV1a.class
+news\NewsFrame$1.class
+minhash\MinHash.class
+news\Review.class
+news\NewsFrame$5.class
+testes\Main.class
+minhash\Shingles.class
+hash\MurmurHash.class
+minhash\Document.class
+bloomfilter\BitArray.class
+news\NewsFrame$RunnableImpl.class
+news\NewsFrame$4.class
+news\NewsFrame$2.class
+news\NewsData.class
+news\NewsFrame.class
+news\NewsFrame$3.class
+bloomfilter\BloomFilter.class
