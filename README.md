@@ -18,9 +18,9 @@ Organized in different files separated by categories (folders):
 Extra category:
 * Any (display all)
 
-First line of the file - Title
-
-Remainder - Content
+### File structure 
+* First line - Title
+* Remainder - Content
 
 ## Tests 
 
